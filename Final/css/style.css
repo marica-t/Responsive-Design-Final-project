@@ -1,0 +1,91 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    margin: 5px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align: center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    border: 7px solid darkseagreen;
+    border-radius: 35px;
+  }
+
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 95%;
+    row-gap: 10px;
+    column-gap: 10px;   
+    justify-content: space-evenly;    
+}
+
+.grid img{
+    align-items: stretch;
+    width: 95%;
+    height: 95%;
+}
+
+a{
+    color: blue;
+}
+
+@media screen and (min-width: 772px){
+    .grid{
+     grid-template-columns: 45% 45%;
+    }     
+    .grid img{    
+        border-radius: 50%; 
+    } 
+    .grid figure:last-child{ 
+        grid-column: 1 / span 2;
+    } 
+}
+
+@media screen and (min-width: 992px){   
+    .grid img{    
+        border-radius: 0;
+    }
+    .grid figure:nth-child(3n){        
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (prefers-color-scheme:dark){ 
+    body{
+        background: #014513;
+        color: #f0ee8b;
+    }
+    .grid img{
+        border: 5px solid #000;
+    }
+    a{
+    color: #6fd2fc;
+}
+}
+
+@media (prefers-reduced-motion) {
+    html {
+        scroll-behavior: initial;
+  }
